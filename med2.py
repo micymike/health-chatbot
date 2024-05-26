@@ -60,7 +60,7 @@ for message in st.session_state.messages:
 
 def clear_chat_history():
      st.session_state.messages = [{"role": "assistant", "content": "Welcome to MediBot💉! I'm here to assist you with any medical queries you may have. Let's talk health!💊"}]
-st.sidebar.button("Delete Chats", on_click=clear_chat_history)
+st.sidebar.button("Clear Chat History", on_click=clear_chat_history)
 
 # Bot answer 
 def generate_llama2_response(prompt_input):
