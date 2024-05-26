@@ -83,7 +83,7 @@ def generate_llama2_response(prompt_input):
     return output
 
 # Chat input and response generation
-if prompt := st.chat_input(placeholder="Be polite, greetings pleaase😊"):
+if prompt := st.chat_input(placeholder="Hello! Enter your prompt here"):
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("User"):
         st.write(prompt)
