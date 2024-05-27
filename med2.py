@@ -30,8 +30,11 @@ relevant_terminologies = [
     "Pharmacology", "Epidemiology", "Public Health", "Healthcare Administration"
 ]
 
+
+
+
 with st.sidebar:
-    st.title("MediBot💉")
+    st.title("Life Style Bot")
     st.write("Welcome to MediBot💉! I'm here to assist you with any medical queries you may have. Let's talk health!💊")
     headers = {
     "Authorization": f"Token {REPLICATE_API_TOKEN}",
@@ -89,7 +92,7 @@ if prompt := st.chat_input(placeholder="Hello! Enter your prompt here"):
         st.write(prompt)
 
     with st.chat_message("Assistant"):
-        with st.spinner("Shhh...🤫Thinking in process"):
+        with st.spinner("Shhh...🤫Thinking in progress"):
             response = generate_llama2_response(prompt)
             full_response = ''.join(response)
             st.write(full_response)
